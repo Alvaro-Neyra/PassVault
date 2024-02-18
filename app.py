@@ -302,5 +302,6 @@ def account():
 
     return render_template("account.html", username=username, count_apps=number_apps[0], apps=apps)
 
+# Iniciando la aplicacion Flask
 if __name__ == "__main__":
     app.run(debug=True)
