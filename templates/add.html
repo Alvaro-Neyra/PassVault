@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add
+{% endblock %}
+
+{% block main %}
+    <div class="add-container">
+        <form action="/add" method="post">
+            <fieldset id="site">
+                <label for="app_name">App Name:</label>
+                <input autocomplete="off" type="text" placeholder="App Name" name="name" id="app_name">
+                <label for="url_app">URL:</label>
+                <input autocomplete="off" type="text" placeholder="URL" name="url" id="url_app">
+                <label for="username">Username:</label>
+                <input autocomplete="off" type="text" placeholder="Username" name="username" id="username">
+                <label for="email">Email:</label>
+                <input autocomplete="off" type="text" placeholder="Email" name="email" id="email">
+                <label for="password">Password:</label>
+                <input autocomplete="off" type="password" placeholder="Password" name="password" id="password">
+                <button type="submit">Add</button>
+            </fieldset>
+        </form>
+    </div>
+{% endblock %}

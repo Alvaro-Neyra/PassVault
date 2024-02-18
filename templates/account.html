@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account
+{% endblock %}
+
+{% block main %}
+<div class="account-container">
+    <h2>{{ username.username }}</h2>
+    <div class="quantity">
+        <span class="number">Number of apps: {{ count_apps.number }}</span>
+    </div>
+    {% if apps %}
+    <div class="apps">
+        {% for app in apps %}
+            <p>{{ app.name }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+<div class="add-container">
+    <form action="/quote" method="post">
+        <fieldset id="site">
+            <label for="app_name">App Name:</label>
+            <input autocomplete="off" type="text" placeholder="App Name (Search)" name="name" id="app_name">
+            <button type="submit">Quote</button>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}

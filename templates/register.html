@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unique Password: Register</title>    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="../static/styles/styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Lato&family=Nunito+Sans:opsz@6..12&family=Poppins&display=swap');        
+        </style>
+        <link rel="stylesheet" href="../static/styles/form.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="login-container">
+                <h2 class="login-heading">Register</h2>
+                <form action="/register" method="post">
+                    <fieldset>
+                        <label class="label-form" for="username">Username</label>
+                        <input autocomplete="off" class="input-form" type="text" name="username" id="username">
+                        <label class="label-form" for="password">Password</label>
+                        <input autocomplete="off" class="input-form" type="password" name="password" id="master-password">
+                        <label class="label-form" for="confirmation">Repeat Password</label>
+                        <input autocomplete="off" class="input-form" type="password" name="confirmation" id="confirmation">
+                        <button type="submit" class="btn log-in">Register</button>
+                        <div class="form-advisor">
+                            <p>Already have an account?</p>
+                            <a class="form-advisor-btn" href="/login">Log In</a>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <footer>
+                <div class="madeby">
+                    <p>Made with ❤️ by</p>
+                    <a href="https://www.github.com/Alvaro-Neyra" target="_blank">
+                    <div class="logo-container">
+                        <img src="../static/images/AlvaroAndLukeTheCoder.png" title="Alvaro-Neyra">
+                        <span>Alvaro-Neyra</span>
+                    </div>
+                    </a>
+                </div>
+                </footer>
+        </footer>
+    </body>
+</html>

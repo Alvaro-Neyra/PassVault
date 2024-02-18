@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete
+{% endblock %}
+
+{% block main %}
+<div class="add-container">
+    <form action="/delete" method="post">
+        <fieldset id="site">
+            <label for="app_name">App Name:</label>
+            <input autocomplete="off" type="text" placeholder="App Name (To Delete)" name="name" id="app_name">
+            <button type="submit">Delete</button>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+<div class="form-container">
+    <table class="passwords">
+        <thead>
+            <tr>
+                <th scope="col" class="head-col">Name</th>
+                <th scope="col" class="head-col">URL</th>
+                <th scope="col" class="head-col">Username</th>
+                <th scope="col" class="head-col">Email</th>
+                <th scope="col" class="head-col">Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if passwords %}
+                {% for password in passwords %}
+                    <tr class="row-item">
+                        <td scope="row" data-cell="name">{{ password.name }}</td>
+                        <td scope="row" data-cell="url">{{ password.url }}</td>
+                        <td scope="row" data-cell="username">{{ password.username }}</td>
+                        <td scope="row" data-cell="email">{{ password.email }}</td>
+                        <td scope="row" data-cell="password">
+                            <div class="password-cell">
+                                <input type="password" class="password-cell-content" value="{{ password.password }}" readonly>
+                                <img src="../static/images/eye-close.png" class="eyeicon">
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

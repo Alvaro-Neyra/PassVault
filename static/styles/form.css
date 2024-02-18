@@ -1,0 +1,85 @@
+html {
+    overflow-x: hidden;
+}
+body {
+    background-color: hsl(20, 46%, 77%);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+    text-align: left;
+    border: 4px solid black;
+    border-radius: 10px;
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    background-size: 400% 400%;
+    animation: animate-background 10s infinite ease-in-out;
+}
+.login-container h2 {
+    display: block;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.login-container form fieldset {
+    padding: 1rem;
+    border: none;
+}
+.login-container input {
+    display: block;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 320px;
+    margin: 1rem auto;
+    padding: 5px;
+}
+.login-container label {
+    font-size: 1rem;
+}
+.login-container button {
+    padding: 5px;
+    width: 60px;
+    cursor: pointer;
+    background-color: hsl(0, 84%, 10%);
+    color: #f3f3f3;
+    border: none;
+    border-radius: 5px;
+}
+.login-container button:hover {
+    background-color:hsl(0, 86%, 37%);
+    transition: background-color 0.3s ease-in-out;
+}
+.form-advisor {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    gap: 0.5rem;
+    color: black;
+}
+.form-advisor a {
+    color: inherit;
+}
+.form-advisor a:visited {
+    color: black;
+}
+.form-advisor a:link {
+    color: black;
+}
+@keyframes animate-background {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}

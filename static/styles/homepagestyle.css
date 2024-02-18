@@ -1,0 +1,55 @@
+body {
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    background-size: 400% 400%;
+    animation: animate-background 10s infinite ease-in-out;
+}
+.homepage-container {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    text-align: center;
+}
+.homepage-container .title {
+    font-size: 4.5rem;
+    margin: 1rem;
+    color: hsl(0, 2%, 76%);
+}
+.homepage-container .subtitle {
+    font-family: 'Gabarito', sans-serif;
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: hsl(0, 1%, 59%);
+}
+.homepage-container button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid hsl(0, 2%, 76%);
+    color: white;
+    cursor: pointer;
+    background-color: hsl(345, 93%, 16%);
+}
+.homepage-container button a {
+    text-decoration: none;
+    color: white;
+}
+.homepage-container button:hover {
+    background-color: hsl(0, 88%, 10%);
+    transition: background-color 0.3s;
+}
+.madeby {
+    color: black;
+}
+.logo-container {
+    --color: white;
+}
+@keyframes animate-background {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Password: {% block title %} {% endblock %}</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../static/styles/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Lato&family=Nunito+Sans:opsz@6..12&family=Poppins&display=swap');        
+    </style>
+    <link rel="stylesheet" href="../static/styles/navbar-gradient.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <ul class="navbar-part-left">
+                <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/add">Add</a></li>
+                <li class="nav-item"><a class="nav-link" href="/delete">Delete</a></li>
+                <li class="nav-item"><a class="nav-link" href="/quote">Quote</a></li>
+                <li class="nav-item"><a class="nav-link" href="/account">Account</a></li>
+            </ul>
+            <ul class="navbar-part-right">
+                <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+    {% if get_flashed_messages() %}
+        <header>
+            <div class="alert alert-primary mb-0 text-center" role="alert">
+                {{ get_flashed_messages() | join(" ") }}
+            </div>
+        </header>
+    {% endif %}
+
+    <main class="container-fluid py-5 text-center">
+        {% block main %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <footer>
+            <div class="madeby">
+              <p>Made with ❤️ by</p>
+              <a href="https://www.github.com/Alvaro-Neyra" target="_blank">
+                <div class="logo-container">
+                  <img src="../static/images/AlvaroAndLukeTheCoder.png" title="Alvaro-Neyra">
+                  <span>Alvaro-Neyra</span>
+                </div>
+              </a>
+            </div>
+          </footer>
+    </footer>
+    <script src="../static/js/password.js"></script>
+</body>
+</html>
