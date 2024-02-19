@@ -18,6 +18,7 @@ app = Flask(__name__)
 # Getting the URL for the cloud database
 load_dotenv()
 url = os.getenv("DATABASE_URL")
+PORT = os.getenv("PORT", 5000)
 
 # Connecting to the PostgreSQL DB
 conn = psycopg2.connect(url)
@@ -304,4 +305,4 @@ def account():
 
 # Iniciando la aplicacion Flask
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=0000, debug=True)
+    app.run(host='0.0.0.0', port=PORT, debug=True)
